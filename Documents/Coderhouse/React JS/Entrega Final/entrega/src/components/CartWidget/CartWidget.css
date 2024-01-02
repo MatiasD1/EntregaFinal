@@ -1,0 +1,24 @@
+/* CartWidget.css */
+
+/* Estilo para el contenedor del CartWidget */
+.cart-widget-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo para la imagen en CartWidget */
+  .cart-widget-container img {
+    width: 20px; /* Puedes ajustar el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 5px; /* Agrega un pequeño espacio entre la imagen y el número */
+  }
+  
+  /* Estilo para la cantidad en el CartWidget */
+  .quantity {
+    font-size: 14px; /* Puedes ajustar el tamaño según tus necesidades */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 50%; /* Borde redondeado para un aspecto más agradable */
+  }
+  

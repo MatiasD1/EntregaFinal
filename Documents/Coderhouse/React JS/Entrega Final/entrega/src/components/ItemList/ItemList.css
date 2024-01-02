@@ -1,0 +1,8 @@
+/* ItemList.css */
+
+.ListGroup {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio suficiente */
+    justify-content: space-around; /* Ajusta el espacio entre los elementos */
+  }
+  
