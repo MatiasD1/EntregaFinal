@@ -1,7 +1,6 @@
-/* Item.css */
-
 .CardItem {
     border: 1px solid #ddd;
+    background-color: white;
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
@@ -20,12 +19,15 @@
   
   .ItemHeader {
     margin: 0;
-    color: #333;
+    color: #000000;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
   }
   
   .ItemImg {
     width: 100%;
-    height: auto;
+    height: 200px; 
+    object-fit: contain;
     border-radius: 8px;
     margin-top: 8px;
   }
@@ -33,6 +35,7 @@
   .Info {
     margin: 8px 0;
     color: #555;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .ItemFooter {
@@ -42,16 +45,17 @@
   
   .Option {
     display: block;
-    background-color: #007bff;
+    background-color: #8917ac;
     color: #fff;
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .Option:hover {
-    background-color: #0056b3;
+    background-color: #5e1171;
   }
   

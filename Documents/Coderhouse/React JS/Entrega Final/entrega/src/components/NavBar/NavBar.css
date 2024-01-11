@@ -1,31 +1,53 @@
-/* NavBar.css */
-
-/* Estilo para el contenedor principal del NavBar */
-nav {
-  background-color: #333; /* Color de fondo del NavBar */
-  color: white; /* Color del texto */
-  padding: 10px; /* Espaciado interno */
+.NavBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333; 
+  padding: 10px 20px; 
+  color: white; 
 }
 
-/* Estilo para el título del NavBar */
-h3 {
-  margin: 0; /* Elimina el margen predeterminado */
+.NavBar h3 {
+  margin: 0;
+  text-decoration: none;
+  color: white;
 }
 
-/* Estilo para los botones del NavBar */
-button {
-  background-color: #007bff; /* Color de fondo de los botones */
-  color: white; /* Color del texto de los botones */
-  border: none; /* Elimina el borde de los botones */
-  padding: 10px 15px; /* Espaciado interno de los botones */
-  margin-right: 10px; /* Espaciado a la derecha entre los botones */
-  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+.Categories {
+  display: flex;
 }
 
-/* Estilo para los botones del NavBar al pasar el ratón */
-button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+.Option {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.ActiveOption {
+  color: #ffcc00;
+}
+
+.CartWidget {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.CartWidget img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.CartWidget .quantity {
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -5px;
+  right: -5px;
+  z-index: 1;
 }
