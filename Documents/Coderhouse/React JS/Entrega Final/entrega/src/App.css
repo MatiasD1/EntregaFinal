@@ -1,39 +1,69 @@
+/* Reset de estilos para asegurar una consistencia en todos los navegadores */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales para la aplicación */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Color de fondo general */
+  color: #333; /* Color del texto principal */
+}
+
 .App {
-  text-align: center;
-  background-color: #bcbcbd;
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrar el contenido en la página */
+  padding: 20px; /* Espaciado interno general */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos para la barra de navegación */
+.NavBar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #333;
+  padding: 10px 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.NavBar h3 {
+  margin: 0;
+  text-decoration: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Categories {
+  display: flex;
 }
+
+.Categories a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.Categories a.active {
+  color: #ffcc00;
+  background-color: transparent;
+}
+
+/* Estilos para la sección de contenido principal */
+.ItemListContainer,
+.ItemDetailContainer,
+.Cart {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Estilos adicionales según sea necesario para otras secciones de la aplicación */
