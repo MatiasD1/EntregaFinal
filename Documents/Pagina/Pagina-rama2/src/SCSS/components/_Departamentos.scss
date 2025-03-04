@@ -1,0 +1,78 @@
+.departamentos{
+    width: 100%;
+    height: auto;
+    position: relative; /* O static si no necesitas posicionamiento especial */
+    z-index: 1; /* Un valor más alto que el carrusel si es necesario */
+}
+
+.portadaDepartamentos{
+    width: auto;
+    height: 650px;
+    margin-bottom: 45px;
+}
+
+.textoDepartamentos {
+    padding: 0px 20px; /* Espaciado interno para el texto */
+    font-family: 'Khula', sans-serif;
+    color: black;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas, una para la foto y otra para el texto */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 450px; /* Altura de cada elemento */
+}
+
+.tituloDepto{
+      font-family: 'Libre Baskerville';
+      font-style: italic;
+      font-size: 35px;
+      color: black;
+}
+
+.subtituloDepto{
+    font-family: 'Khula', sans-serif;
+    font-size: 20px;
+}
+
+.textoDepto{
+    font-family: 'Imprima', serif;
+}
+
+.florFooter{
+    position: relative;
+    width: 50px;
+}
+
+.fotosDeptos {
+    position: relative;
+    width: 100%; /* Ajusta el ancho del contenedor de la foto al 100% */
+    height: 100%; /* Ajusta la altura del contenedor de la foto al 100% */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+    background-color: black;
+}
+
+.fotoSimbolo {
+    position: absolute; /* Establece la posición absoluta para que la imagen se pueda mover libremente */
+    top: 50%; /* Coloca la parte superior de la imagen en el centro vertical */
+    left: 50%; /* Coloca la parte izquierda de la imagen en el centro horizontal */
+    transform: translate(-50%, -50%) scale(0.1); /* Centra la imagen horizontal y verticalmente y la escala al 50% del tamaño original */
+    z-index: 1; /* Coloca la imagen del símbolo encima de la imagen de la ducha */
+}
+
+.fotoDepto {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor de la foto */
+    height: 100%; /* La imagen ocupa todo el alto del contenedor de la foto */
+    object-fit: cover; /* La imagen se ajusta manteniendo la relación de aspecto y cubriendo el contenedor */
+    transition: 0.3s;
+}
+
+.simboloMas{
+    position: absolute;
+    display: none;
+}
+.fotosDeptos img:hover {
+    cursor: pointer;
+    opacity: 50%;
+}

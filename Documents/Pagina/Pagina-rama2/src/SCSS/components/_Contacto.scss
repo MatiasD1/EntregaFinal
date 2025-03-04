@@ -1,0 +1,107 @@
+.contacto {
+    display: flex;
+    width: 100%;
+    flex-direction: row; 
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+    background-color: black;
+}
+
+.fotoCosta {
+    opacity: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsionarse */
+}
+
+.textoContacto {
+    align-self: center;
+    z-index: 1;
+    /* Padding eliminado para alinear el texto correctamente */
+}
+
+.contact-form {
+    margin-top: 63px;
+    width: 400px; /* Ancho ajustado para entrar en el espacio */
+    max-width: 100%; 
+    max-height: 550px;
+    height: auto;
+    background-color: #00000059;
+    padding: 10px;
+    border-radius: 5px;
+    font-family:'Khula', sans-serif;
+    font-size: 16px;
+    margin-right: 48px;
+    z-index: 1;
+}
+
+h2 {
+    color: wheat;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: wheat;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"]
+{
+    background-color: #00000059;
+    color: wheat;
+    width: 90%;
+    padding: 6px; /* Reducir el relleno */
+    margin-bottom: 8px; /* Reducir el margen inferior */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30px; /* Reducir la altura */
+}
+textarea {
+    background-color: #00000059;
+    color: wheat;
+    width: 90%;
+    padding: 6px; /* Reducir el relleno */
+    margin-bottom: 8px; /* Reducir el margen inferior */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100px; /* Reducir la altura */
+}
+.fechasContacto {
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    margin-bottom: 8px; /* Agregar margen inferior para separarlos de los demás inputs */
+}
+
+#fecha-entrada{
+    width: 150px;
+}
+#fecha-salida{
+    width: 150px;
+}
+
+button[type="submit"] {
+    background-color: #B7472A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #bb3614;
+}

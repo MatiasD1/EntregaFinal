@@ -1,0 +1,13 @@
+.carrusel2 {
+    position: relative;
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+}
+
+
+.carrusel2 .carousel-item1 img {
+    height: 450px; /* Ajusta este valor según la altura deseada */
+    
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+}

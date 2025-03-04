@@ -1,0 +1,64 @@
+.nav-link {
+    color: #FFF2E5;
+    margin-top: 1rem; /* Cambiado a unidad de medida relativa */
+    /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
+    border-bottom: 2px solid transparent; /* Subrayado transparente por defecto */
+    padding: 20px 20px; /* Ajusta el relleno del botón */
+    font-size: 16px; /* Ajusta el tamaño del texto del botón */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Libre Baskerville';
+}
+
+.nav-link:hover {
+    color: white;
+    border-bottom-color: rgb(255, 255, 255); /* Cambia el color del subrayado al pasar el cursor */
+    transition: border-bottom-color 0.5s ease; /* Agregado para una transición suave del subrayado */
+    text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
+}
+
+.nav-link:visited {
+    color: rgb(255, 222, 203);
+}
+/*
+.nav-link:focus {
+    Define aquí el color deseado cuando el enlace está enfocado (cuando se hace clic) 
+    color: rgb(197, 80, 12);  Puedes ajustar este color según tus necesidades 
+}
+*/
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del carrusel */
+    margin-bottom: 72px;
+    padding-right: 30px;/*PARA MOVER LA BARRA*/
+}
+
+.NavBar {
+    display: flex;
+    align-items: center;  
+}
+
+.NavBar h2 {
+    font-size: 40px;
+    position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    margin-left: 40px;
+    margin-top: 105px; 
+    z-index: 1200; /* Asegura que esté por encima del NavBar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.fixed .nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+}

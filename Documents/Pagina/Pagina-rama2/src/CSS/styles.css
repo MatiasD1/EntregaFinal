@@ -1,0 +1,668 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+.App {
+  text-align: center;
+  background-color: #EDCFA9;
+}
+
+.carrusel {
+  margin-top: auto; /* Empuja el carrusel hacia la parte inferior */
+  height: 100vh; /* Ajusta la altura al 100% de la altura de la vista */
+  background-color: black;
+}
+
+.carousel-inner1 img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#carouselExampleAutoplaying {
+  opacity: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+  width: 100%;
+  max-height: 100vh; /* Ajusta la altura al 100% de la vista */
+}
+
+.contacto {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+  background-color: black;
+}
+
+.fotoCosta {
+  opacity: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsionarse */
+}
+
+.textoContacto {
+  align-self: center;
+  z-index: 1;
+  /* Padding eliminado para alinear el texto correctamente */
+}
+
+.contact-form {
+  margin-top: 63px;
+  width: 400px; /* Ancho ajustado para entrar en el espacio */
+  max-width: 100%;
+  max-height: 550px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.3490196078);
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Khula", sans-serif;
+  font-size: 16px;
+  margin-right: 48px;
+  z-index: 1;
+}
+
+h2 {
+  color: wheat;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Libre Baskerville";
+  font-style: italic;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: wheat;
+}
+
+input[type=text],
+input[type=date],
+input[type=number],
+input[type=email] {
+  background-color: rgba(0, 0, 0, 0.3490196078);
+  color: wheat;
+  width: 90%;
+  padding: 6px; /* Reducir el relleno */
+  margin-bottom: 8px; /* Reducir el margen inferior */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 30px; /* Reducir la altura */
+}
+
+textarea {
+  background-color: rgba(0, 0, 0, 0.3490196078);
+  color: wheat;
+  width: 90%;
+  padding: 6px; /* Reducir el relleno */
+  margin-bottom: 8px; /* Reducir el margen inferior */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 100px; /* Reducir la altura */
+}
+
+.fechasContacto {
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  margin-bottom: 8px; /* Agregar margen inferior para separarlos de los demás inputs */
+}
+
+#fecha-entrada {
+  width: 150px;
+}
+
+#fecha-salida {
+  width: 150px;
+}
+
+button[type=submit] {
+  background-color: #B7472A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #bb3614;
+}
+
+.carrusel2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.carrusel2 .carousel-item1 img {
+  height: 450px; /* Ajusta este valor según la altura deseada */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+}
+
+.departamentos {
+  width: 100%;
+  height: auto;
+  position: relative; /* O static si no necesitas posicionamiento especial */
+  z-index: 1; /* Un valor más alto que el carrusel si es necesario */
+}
+
+.portadaDepartamentos {
+  width: auto;
+  height: 650px;
+  margin-bottom: 45px;
+}
+
+.textoDepartamentos {
+  padding: 0px 20px; /* Espaciado interno para el texto */
+  font-family: "Khula", sans-serif;
+  color: black;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas, una para la foto y otra para el texto */
+  align-items: center; /* Centra verticalmente el contenido */
+  height: 450px; /* Altura de cada elemento */
+}
+
+.tituloDepto {
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-size: 35px;
+  color: black;
+}
+
+.subtituloDepto {
+  font-family: "Khula", sans-serif;
+  font-size: 20px;
+}
+
+.textoDepto {
+  font-family: "Imprima", serif;
+}
+
+.florFooter {
+  position: relative;
+  width: 50px;
+}
+
+.fotosDeptos {
+  position: relative;
+  width: 100%; /* Ajusta el ancho del contenedor de la foto al 100% */
+  height: 100%; /* Ajusta la altura del contenedor de la foto al 100% */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+  background-color: black;
+}
+
+.fotoSimbolo {
+  position: absolute; /* Establece la posición absoluta para que la imagen se pueda mover libremente */
+  top: 50%; /* Coloca la parte superior de la imagen en el centro vertical */
+  left: 50%; /* Coloca la parte izquierda de la imagen en el centro horizontal */
+  transform: translate(-50%, -50%) scale(0.1); /* Centra la imagen horizontal y verticalmente y la escala al 50% del tamaño original */
+  z-index: 1; /* Coloca la imagen del símbolo encima de la imagen de la ducha */
+}
+
+.fotoDepto {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor de la foto */
+  height: 100%; /* La imagen ocupa todo el alto del contenedor de la foto */
+  object-fit: cover; /* La imagen se ajusta manteniendo la relación de aspecto y cubriendo el contenedor */
+  transition: 0.3s;
+}
+
+.simboloMas {
+  position: absolute;
+  display: none;
+}
+
+.fotosDeptos img:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.EnlaceContacto {
+  position: relative;
+  text-align: center;
+}
+
+.contenedorEnlaceContacto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotoEnlaceContacto {
+  display: block;
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: 500px; /* Ajusta la altura según sea necesario */
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+}
+
+.textoEnlaceContacto {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 222, 179); /* Cambia el color del texto si es necesario */
+  font-size: 5rem; /* Ajusta el tamaño del texto según sea necesario */
+  font-family: "Libre Baskerville";
+  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
+  padding: 0.5rem; /* Espaciado interno para el texto */
+  border: 2px solid rgb(245, 222, 179);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.textoEnlaceContacto:hover {
+  color: rgb(211, 211, 211);
+  border: 2px solid rgb(211, 211, 211);
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.FraseEnlaceContacto {
+  position: absolute;
+  color: white;
+  top: 25%;
+}
+
+footer {
+  padding-top: 20px;
+  width: 100%;
+  height: 200px;
+  background-color: #f1ad6d;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: auto; /* Empuja el footer hacia abajo hasta el final de la página */
+}
+
+.columnaFooter {
+  display: flex;
+  flex-direction: column;
+  font-family: "Khula", sans-serif;
+}
+
+.columnaFooter h3 {
+  margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
+  font-size: 25px;
+}
+
+.columnaFooter p {
+  font-size: 14px;
+  max-width: 150px;
+  margin: auto;
+  color: white;
+  text-decoration: none;
+}
+
+.accesoNav {
+  color: white;
+  text-decoration: none;
+}
+
+.logosRedes {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 70px 20px 70px; /*sup, der, inf, izq*/
+}
+
+.logoRed img { /*faltaba el img para influir en el tamaño de las img*/
+  width: 50px;
+  height: 50px;
+}
+
+.frase {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.fotoFrase {
+  width: 100%;
+  opacity: 60%;
+  height: auto;
+}
+
+/* Establece las propiedades para el contenido de la galería */
+.galeria-content {
+  position: fixed; /* Cambiado a fixed para evitar desplazamientos inesperados */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  max-width: auto; /* Cambiado a un ancho máximo del 80% */
+  max-height: auto; /* Cambiado a una altura máxima del 80% */
+  overflow: auto; /* Añadido para manejar el desbordamiento de contenido */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1500;
+}
+
+/* Establece las propiedades para los contenedores de las diapositivas */
+.galeria-slides {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+/* Establece las propiedades para las imágenes dentro de las diapositivas */
+.galeria-slide img {
+  width: auto; /* Cambiado a auto para ajustar la imagen al tamaño del contenedor */
+  height: 80vh; /* Cambiado a una altura fija del 80% del viewport */
+  max-width: 100%; /* Cambiado a un ancho máximo del 100% */
+}
+
+/* Establece las propiedades para el botón de diapositiva anterior y siguiente */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.prev-btn {
+  left: 0; /* Alinear el botón de navegación izquierdo */
+}
+
+.next-btn {
+  right: 0; /* Alinear el botón de navegación derecho */
+}
+
+/* Establece las propiedades para los puntos de navegación entre las diapositivas */
+.galeria-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.galeria-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1200;
+}
+
+/* Establece las propiedades para cada punto de navegación */
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Establece las propiedades para el punto de navegación activo */
+.dot.active {
+  background-color: #FFFFFF; /* Cambiado a blanco para mayor visibilidad */
+}
+
+.presentacionInicio {
+  padding: 40px;
+}
+
+.Mapa {
+  /*display: flex;
+  justify-content: center;
+  Esto se maneja desde el contenedor en Ubicacion
+  */
+  height: 500px;
+  width: 70%;
+}
+
+.nav-link {
+  color: #FFF2E5;
+  margin-top: 1rem; /* Cambiado a unidad de medida relativa */
+  /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
+  border-bottom: 2px solid transparent; /* Subrayado transparente por defecto */
+  padding: 20px 20px; /* Ajusta el relleno del botón */
+  font-size: 16px; /* Ajusta el tamaño del texto del botón */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Libre Baskerville";
+}
+
+.nav-link:hover {
+  color: white;
+  border-bottom-color: rgb(255, 255, 255); /* Cambia el color del subrayado al pasar el cursor */
+  transition: border-bottom-color 0.5s ease; /* Agregado para una transición suave del subrayado */
+  text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
+}
+
+.nav-link:visited {
+  color: rgb(255, 222, 203);
+}
+
+/*
+.nav-link:focus {
+    Define aquí el color deseado cuando el enlace está enfocado (cuando se hace clic) 
+    color: rgb(197, 80, 12);  Puedes ajustar este color según tus necesidades 
+}
+*/
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté por encima del carrusel */
+  margin-bottom: 72px;
+  padding-right: 30px; /*PARA MOVER LA BARRA*/
+}
+
+.NavBar {
+  display: flex;
+  align-items: center;
+}
+
+.NavBar h2 {
+  font-size: 40px;
+  position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
+  font-family: "Dancing Script", cursive;
+  color: white;
+  margin-left: 40px;
+  margin-top: 105px;
+  z-index: 1200; /* Asegura que esté por encima del NavBar */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.fixed .nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+}
+
+.servicios {
+  background-color: #C83B3B;
+  height: 600px;
+  margin-top: 45px;
+}
+
+.servicios h1 {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.iconos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  column-gap: 0px;
+  row-gap: 40px;
+  color: white;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+
+.icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 90px;
+  transition: transform 0.3s;
+}
+
+.icono img {
+  width: 65px;
+}
+
+.icono:hover {
+  transform: scale(1.1);
+}
+
+.icono:hover img {
+  transform: scale(1.1);
+}
+
+.icono:hover p {
+  transform: scale(1); /* Aplica la escala inversa al texto para compensar la escala del contenedor */
+}
+
+.icono p {
+  padding-top: 5px;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  transition: transform 0.3s; /* Aplica la misma transición a transform del texto */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opacidad inicial */
+  }
+  to {
+    opacity: 1; /* Opacidad final */
+  }
+}
+.textAnimation1 {
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  margin-left: -290px;
+  height: 40px;
+  top: 70%;
+  margin-top: -20px;
+  color: white;
+  font-family: "Khula", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  white-space: nowrap; /* Previene el salto de línea */
+  opacity: 0; /* Comienza con opacidad 0 para el efecto de fade in */
+  animation: fadeIn 1s ease forwards; /* Animación de fade in */
+}
+
+.textAnimation1 p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: wheat;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  left: 315px;
+  white-space: pre; /* Mantiene los espacios en blanco tal como están */
+}
+
+.word.active {
+  opacity: 1;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.subtituloTextAnimation {
+  position: absolute;
+  display: flex;
+  top: 50px;
+  left: 200px;
+  font-size: 25px;
+}
+
+.ubicacion {
+  min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
+  width: 100%;
+  background-color: #af0e0e;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
+}
+
+.carruselUbicacion {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.carruselUbicacion .carousel {
+  padding-top: 150px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+}
+
+.textoUbicacion {
+  height: 600px;
+  background-color: #df3a10;
+}
+
+.serviciosCercanos {
+  height: 440px;
+  background-color: #197740;
+}
+
+.mapaUbicacion {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  background-color: #00aeff;
+}
+
+/*# sourceMappingURL=styles.css.map */
