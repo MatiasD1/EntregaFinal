@@ -1,0 +1,25 @@
+body {
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.btn {
+  background-color: #61dafb;
+  color: #282c34;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #4fa3d1;
+}
+
+/*# sourceMappingURL=main.css.map */
