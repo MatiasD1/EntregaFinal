@@ -24,16 +24,31 @@ const Login = () => {
     }
   };
 
+  // Definir los campos para AuthForm
+  const fields = [
+    { 
+      name: "email", 
+      label: "Correo electrónico", 
+      type: "email", 
+      value: email, 
+      setValue: setEmail 
+    },
+    { 
+      name: "password", 
+      label: "Contraseña", 
+      type: "password", 
+      value: password, 
+      setValue: setPassword 
+    }
+  ];
+
   return (
     <div className="login">
       <AuthForm
         title="Iniciar sesión"
         buttonText="Iniciar sesión"
         handleSubmit={handleLogin}
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
+        fields={fields}  // Pasar los campos aquí
       />
     </div>
   );
