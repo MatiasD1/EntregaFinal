@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { db } from "../firebaseConfig"; 
+import { db } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../auth";
+import { setDoc, doc } from "firebase/firestore";
 
 const Register = () => {
   const [step, setStep] = useState(1);
@@ -16,11 +18,11 @@ const Register = () => {
     licencia: "",
     aliasBancario: "",
     aceptaTerminos: false,
+    password: "",
   });
-  const [message, setMessage] = useState("");  // Estado para el mensaje de éxito o error
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  // Manejar cambios en los inputs
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -29,30 +31,33 @@ const Register = () => {
     });
   };
 
-  // Avanzar y retroceder pasos
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
 
-  // Enviar datos a Firestore
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      await addDoc(collection(db, "usuarios"), {
+      // Registrar usuario en Firebase Authentication
+      const user = await registerUser(formData.email, formData.password);
+      
+      // Guardar datos en Firestore con el rol asignado automáticamente
+      await setDoc(doc(db, "usuarios", user.uid), {
         ...formData,
+        role: "user",  // Asignación automática del rol "user"
         timestamp: new Date(),
       });
-      console.log("Datos enviados a Firestore correctamente");
-      setMessage("Registro exitoso"); 
-      setStep(5);
+    
+      console.log("✅ Registro exitoso");
+      alert("Registro exitoso");
       navigate("/login");
-      } catch (error) {
-      console.error("Error al enviar datos a Firestore:", error);
+    } catch (error) {
+      console.error("❌ Error al registrar:", error);
       setMessage("Hubo un error al registrar. Inténtalo nuevamente.");
-      setStep(5);
+      setStep(6);
     }
   };
-
+  
+  
   return (
     <div className="formContainer">
       <form onSubmit={handleSubmit}>
@@ -96,6 +101,15 @@ const Register = () => {
 
         {step === 4 && (
           <>
+            <h2>Crear contraseña</h2>
+            <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Contraseña" required />
+            <button type="button" onClick={prevStep}>Atrás</button>
+            <button type="button" onClick={nextStep}>Siguiente</button>
+          </>
+        )}
+
+        {step === 5 && (
+          <>
             <h2>Confirmar Datos</h2>
             <p><strong>Nombre:</strong> {formData.nombre} {formData.apellido}</p>
             <p><strong>Email:</strong> {formData.email}</p>
@@ -109,13 +123,14 @@ const Register = () => {
             <button type="submit">Registrar</button>
           </>
         )}
-        {step === 5 && (
+
+        {step === 6 && (
           <>
             <h2>{message}</h2>
             <button type="button" onClick={() => setStep(1)}>Continuar al sitio</button>
           </>
-        )}      
-        </form>
+        )}
+      </form>
     </div>
   );
 };

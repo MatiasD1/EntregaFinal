@@ -4,6 +4,7 @@ import { authenticateUser } from "../auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 import AuthForm from "./authForm"; // Importa el componente reutilizable
+import { auth } from "../firebaseConfig";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,15 +15,26 @@ const Login = () => {
     e.preventDefault();
     try {
       const user = await authenticateUser(email, password);
-      if (!user?.uid) return;
-
+      if (!user?.uid) {
+        console.error("❌ Usuario no autenticado");
+        return;
+      }
+  
       const userDoc = await getDoc(doc(db, "usuarios", user.uid));
-      const role = userDoc.exists() ? userDoc.data().role : "user";
+      if (!userDoc.exists()) {
+        console.error("❌ Usuario no encontrado en Firestore");
+        return;
+      }
+  
+      const role = userDoc.data().role || "user";
       navigate(role === "admin" ? "/admin" : "/user");
+      console.log("Usuario autenticado y redirigido:", auth.currentUser);
+  
     } catch (error) {
-      console.error("Error al iniciar sesión", error);
+      console.error("❌ Error al iniciar sesión:", error);
     }
   };
+  
 
   // Definir los campos para AuthForm
   const fields = [
